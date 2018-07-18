@@ -1,7 +1,13 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import app.Item;
+import app.ToDoList;
+
 public class MainClass {
+	
+	public static ToDoList toDoList = new ToDoList();
+	
 	public static void main(String[] args){
 		boolean exit = false;
 		do {
@@ -34,6 +40,8 @@ public class MainClass {
 			
 		case 2:
 			System.out.println("2");
+			Item item = new Item("item", null, null);
+			toDoList.addItem(item);
 			break;
 			
 		case 3:
