@@ -32,13 +32,11 @@ public class MainClass {
 
 	public static int readInput() {
 		int input = -1;
-		try {
+		if (scanner.hasNextInt()) {
 			input = scanner.nextInt();
-			scanner.nextLine();
-		} catch(Exception e) {
-			System.out.println("Invalid choice");
-		} 
-
+		}
+		scanner.nextLine();
+		
 		switch (input) {
 		case 1:
 			showCurrentList();
