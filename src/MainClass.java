@@ -45,7 +45,7 @@ public class MainClass {
 			break;
 
 		case 2:
-			System.out.println("Please enter description: \n");
+			System.out.println("Please enter description for item: ");
 			String description = scanner.nextLine();
 			Item item = new Item(description, null, null);
 			toDoList.addItem(item);
@@ -53,7 +53,10 @@ public class MainClass {
 			break;
 
 		case 3:
-			System.out.println("3");
+			System.out.println("Please enter item id to delete: ");
+			int itemId = scanner.nextInt();
+			toDoList.deleteItem(itemId);
+			showCurrentList();
 			break;
 
 		case 9:
